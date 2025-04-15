@@ -1,7 +1,7 @@
 {
   "name": "karelia-ai",
   "version": "1.0.0",
-  "description": "Beelzebul-AI.JS is an LLM-based Artificial Intelligence Discord Bot closely modeled after an actual person for *ScIeNtIfIc pUrPoSes*. Uses Google Generative AI.",
+  "description": "Karelia-AI.JS is an LLM-based Artificial Intelligence Discord Bot closely modeled after an actual person for *ScIeNtIfIc pUrPoSes*. Uses Google Generative AI.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
