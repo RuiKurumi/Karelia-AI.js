@@ -11,7 +11,7 @@ const { analyzeMedia } = require('../commands/mediaCommand.js');
 // Initialize the Google Generative AI model
 const genAI = new GoogleGenerativeAI(process.env.g_apiKey);
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash", // Use Gemini 2.0 Flash for text and media
+  model: "models/gemini-2.0-flash", // Use Gemini 2.0 Flash for text and media
   safetySettings: [
     { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
     { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_MEDIUM_AND_ABOVE" },

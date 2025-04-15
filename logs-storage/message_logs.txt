@@ -1,0 +1,511 @@
+[2025-03-04T05:17:51.650Z] having an obfuscated function there sounds insane
+
+
+```js
+if(bannedPhraseWords.some(word => content.toLowerCase().includes(word))){
+    await message.delete();
+    message.channel.send(`${message.author}, your message contained prohibited words or phrases and was removed.`).then(msg =>{
+      setTimeout(() => msg.delete(), 5000);
+    });
+    zrffntrUnaqyre(message);
+    return;
+  }
+``` 
+<@783979727462596619>
+[2025-03-04T05:18:25.488Z] <:warfinLaugh:1239595464081276938>  DAAYUMM
+[2025-03-04T05:18:39.746Z] ```js
+const fs = require('fs');
+const path = require('path');
+
+// Import the Base64 encoded function from obfuscated.js
+const obf = require('./obfuscated.js'); 
+
+// Ensure obf is a string before decoding
+if (typeof obf !== 'string') {
+    console.error("Error: obfuscated.js did not export a string.");
+    process.exit(1);
+}
+
+// Decode the function from Base64 back to JavaScript code
+const decFun = Buffer.from(obf, 'base64').toString('utf-8');
+
+// Save the deobfuscated function (optional for debugging)
+fs.writeFileSync(path.join(__dirname, 'decFunc.js'), decFun);
+
+// Execute the function using `new Function()`
+const func = new Function(decFun + '; return zrffntrUnaqyre;');
+const zrffntrUnaqyre = func(); // Extract function reference
+
+// Ensure function exists before exporting
+if (typeof zrffntrUnaqyre !== 'function') {
+    console.error("Error: zrffntrUnaqyre is not defined.");
+    process.exit(1);
+} else {
+    module.exports = { zrffntrUnaqyre };
+}
+```
+[2025-03-04T05:20:19.016Z] <:MavuikaCool:1315617856964005888>
+[2025-03-04T05:20:32.093Z] kar> filter testing, free robux
+[2025-03-04T05:20:32.527Z] kar> filter testing, free robux
+[2025-03-04T05:21:04.187Z] RET'S GO DESHOU
+[2025-03-04T05:21:16.945Z] <:Mavuika4K:1315617867135189083>
+[2025-03-04T05:21:20.314Z] NOO WAY
+[2025-03-04T05:21:47.478Z] ```json
+{
+    "banned_phrases_words": [ "moans softly", "bites lip", "grinds against", "leans in closer", 
+    "slides hands down", "tugs on your", "whispers seductively", "kisses deeply",
+    "pins you down", "breathes heavily", "arches back", "gasps in pleasure",
+    "pulls you closer", "runs fingers through", "trails kisses down", 
+    "nibbles on your ear", "wraps legs around", "strokes gently", "caresses softly",
+    "presses against you", "pulsing with desire", "trembles with anticipation",
+    "lets out a soft whimper", "teases playfully", "rolls on top of you",
+
+    "porn", "nude", "xxx", "sex", "hentai", "camgirl", "onlyfans", 
+    "sugar daddy", "dildo", "stripper", "escort", "fetish", "nsfw",
+    "boobs", "tits", "deepfake", "incest", "bdsm", "creampie",
+
+    "free robux", "click here", "win money", "giveaway", "bitcoin investment",
+    "dm for promo", "subscribe now", "cash app", "follow for free", "boost followers",
+    "make money fast", "100% legit", "earn $1000 today", "telegram group"
+
+]
+}
+```
+[2025-03-04T05:21:52.982Z] I had to put this as a filter
+[2025-03-04T05:21:59.910Z] IT'S NEEDED
+[2025-03-04T05:22:21.967Z] <:warfinLaugh:1239595464081276938> <:warfinLaugh:1239595464081276938> <:warfinLaugh:1239595464081276938>
+[2025-03-04T05:22:30.898Z] Make money fast is insane
+[2025-03-04T05:22:44.767Z] had to make sure it can't be used for promoting scams fr
+[2025-03-04T05:22:46.353Z] "Moans softly" 💀 <:skull_og:1338557571073839216>
+[2025-03-04T05:22:53.266Z] Fr fr
+[2025-03-04T05:22:59.361Z] THAT'S FOR RESTRICTING ROLEPLAY
+[2025-03-04T05:23:10.406Z] I DO NOT ENDORSE THAT USAGE LMAO
+[2025-03-04T05:23:23.199Z] Me neither 😭
+[2025-03-04T05:23:34.998Z] "SUGAR DADDY"
+[2025-03-04T05:23:39.327Z] LMFAO
+[2025-03-04T05:23:40.459Z] I should've applied this last week but I got lazy
+[2025-03-04T05:23:43.102Z] <:Misato_Anguish:953746750043217940>
+[2025-03-04T05:23:48.290Z] ⚰️
+[2025-03-04T05:24:04.121Z] THEN WE WOULDN'T BE HERE
+[2025-03-04T05:24:11.272Z] 😭
+[2025-03-04T05:24:23.029Z] https://tenor.com/view/thanos-vanish-gif-20470261
+[2025-03-04T05:25:10.286Z] did bro bait me into vc
+[2025-03-04T05:25:45.363Z] NO
+[2025-03-04T05:25:48.010Z] I WAS SWITCHING
+[2025-03-04T05:26:01.531Z] aigh bet
+[2025-03-04T05:26:05.165Z] 😭
+[2025-03-04T05:26:13.776Z] https://tenor.com/view/hajime-todoroki-banchou-hololive-cute-gif-9588616789287685280
+[2025-03-04T05:26:25.016Z] why do I have red bars on my vc signal
+[2025-03-04T05:26:28.700Z] wallahi it's over
+[2025-03-04T05:26:29.627Z] lmao
+[2025-03-04T05:26:47.173Z] i think it connected to India dc servers
+[2025-03-04T05:26:50.344Z] im getting 15 ms
+[2025-03-04T05:27:01.839Z] probs
+[2025-03-04T05:27:28.975Z] woah waht
+[2025-03-04T05:27:31.857Z] yeah
+[2025-03-04T05:27:45.546Z] that's because I killed the game I was playing LMAO
+[2025-03-04T09:43:50.900Z] OH
+[2025-03-04T09:43:55.738Z] hm
+[2025-03-04T09:43:58.372Z] good bowl
+[2025-03-04T09:44:11.532Z] I can just watch your chats here LMAO
+[2025-03-04T09:44:15.507Z] dunder
+[2025-03-04T09:44:23.190Z] <:warfinLaugh:1239595464081276938>
+[2025-03-04T09:44:35.249Z] oh damn kuldeep yadav did good bowling
+[2025-03-04T09:46:08.109Z] <@569554121523462185>  this is why I loved Dhoni
+though its not normal , to bring spin in the first overs 
+in the India vs Australia world cup match he brought Ashwin in to bowl the first over itself to put pressure on Australia cuz their weakness has always been spin
+[2025-03-04T09:46:35.383Z] he continued bowling ashwin till the 5th over alternatively and he picked up
+[2025-03-04T09:46:42.648Z] # <@569554121523462185>  TRAVIS HEAD GONE
+[2025-03-04T09:46:51.016Z] # VARUN CHAKRAVARTY GOT HIM OUT
+[2025-03-04T09:46:57.435Z] # YAAAASSSSS
+[2025-03-04T09:47:16.903Z] # FUCK YEAH
+[2025-03-04T09:47:19.135Z] 🗣️
+[2025-03-04T09:47:25.438Z] # W VARUN
+[2025-03-04T09:47:31.742Z] # COLLAPSE AUSTRALIA
+[2025-03-04T09:47:36.909Z] # COLLAPSE COLLAPSE COLLAPSE
+[2025-03-04T09:48:13.314Z] kar> filter testing, robux
+[2025-03-04T09:48:50.805Z] kar> filter testing again, click here
+[2025-03-04T09:48:51.346Z] kar> filter testing again, click here
+[2025-03-04T09:51:00.776Z] kar> filter testing, telegram group
+[2025-03-04T09:51:01.372Z] kar> filter testing, telegram group
+[2025-03-04T09:51:11.492Z] there it works now
+[2025-03-04T09:51:25.044Z] 
+[2025-03-04T09:51:31.010Z] redundancy just for transparency
+[2025-03-04T09:52:01.360Z] filtered_logs are only for things that get filtered, message_logs for all messages
+[2025-03-04T09:52:12.099Z] allows me to double check and verify even when deleted
+[2025-03-04T09:54:26.630Z] kar> filter logging test, 100% legit
+[2025-03-04T09:54:27.357Z] kar> filter logging test, 100% legit
+[2025-03-04T09:55:58.787Z] kar> filter testing, 100% legit
+[2025-03-04T09:55:59.441Z] kar> filter testing, 100% legit
+[2025-03-04T09:56:52.425Z] kar> filter testing again, output file test, 100% legit
+[2025-03-04T09:56:53.041Z] kar> filter testing again, output file test, 100% legit
+[2025-03-04T09:59:23.869Z] kar>help
+[2025-03-04T09:59:47.616Z] kar>filter test, telegram group
+[2025-03-04T09:59:48.213Z] kar>filter test, telegram group
+[2025-03-04T10:14:20.651Z] <@442857430305734657> LMFAO
+[2025-03-04T10:19:44.498Z] https://www.youtube.com/watch?v=Qn5p9cT7lfI
+
+the answer is yes, ma'am
+[2025-03-04T10:20:17.502Z] 18 oves gone
+[2025-03-04T10:20:21.118Z] 92 runs
+[2025-03-04T10:20:22.746Z] good so far
+[2025-03-04T10:35:26.653Z] How do we tell him
+[2025-03-04T10:37:34.110Z] <@569554121523462185>  MARNUS GONE
+[2025-03-04T10:37:41.181Z] WANNA WATCH FOR A BIT?!
+[2025-03-04T10:38:01.318Z] "Great farmers" looks inside: the illegal immigrants he wishes to deport
+[2025-03-04T10:38:26.893Z] We don't
+[2025-03-04T10:38:44.635Z] We sit back and watch
+[2025-03-04T10:39:08.633Z] WAIT
+ARSHDEEP SINGH IS IN
+[2025-03-04T10:39:17.995Z] LETS GOOOOO
+[2025-03-04T10:39:21.977Z] The actually sane Republicans:
+[2025-03-04T10:40:25.097Z] There's a big speech tomorrow, expect more gaslighting than a twitter.com callout post filed with accusations of pedophilia, abuse and sexual grooming
+[2025-03-04T10:43:03.010Z] 24 obers 120 only
+[2025-03-04T10:43:04.242Z] Good
+[2025-03-04T10:51:05.073Z] # <@569554121523462185>  JOSH INGLIS GONE
+[2025-03-04T10:51:08.668Z] LETS GO
+[2025-03-04T10:51:20.226Z] LETS DICKING GO
+[2025-03-04T10:51:37.625Z] GET STEVE SMITH PUT NOW INDIA
+[2025-03-04T11:25:48.221Z] https://www.youtube.com/watch?v=wGPiALF26ks&t=15s
+[2025-03-04T11:25:50.253Z] Dude
+[2025-03-04T11:26:02.569Z] this is literally quite possibly how Evangelion started
+[2025-03-04T11:31:30.312Z] STEVE SMITH GONE
+[2025-03-06T15:32:51.524Z] kar> make simple python code of your liking
+[2025-03-06T15:33:05.808Z] goddamn
+[2025-03-06T15:33:06.995Z] alright
+[2025-03-06T15:33:47.160Z] see
+[2025-03-06T15:33:54.196Z] even bot likes you
+[2025-03-06T15:33:58.041Z] shh
+[2025-03-06T15:34:08.799Z] 💀
+[2025-03-06T16:13:55.412Z] the "memes" <@442857430305734657>  posts :
+[2025-03-06T16:19:45.767Z] kar> chessmove e4
+[2025-03-06T16:20:17.519Z] kar>chessmove e4
+[2025-03-06T16:20:25.139Z] yeah it isn't working yet
+[2025-03-06T16:21:56.821Z] kar>chessmove e2e4
+[2025-03-06T16:24:04.425Z] k!chessmove e2e4
+[2025-03-06T16:25:09.270Z] k!chessmove e2e4
+[2025-03-06T16:32:00.230Z] insane
+ma nigga got the generational intelligence
+[2025-03-06T16:32:10.682Z] k!chessmove e2e4
+[2025-03-06T16:34:22.775Z] k!chessmove e2e4
+[2025-03-06T16:35:31.858Z] kar>chessmove e2e4
+[2025-03-06T16:36:47.262Z] kar>chessmove e2e4
+[2025-03-06T16:37:57.507Z] kar>chessmove e2e4
+[2025-03-06T16:40:19.735Z] kar>chessmove e2e4
+[2025-03-06T16:42:04.796Z] kar>chessmove e2e4
+[2025-03-07T03:35:41.100Z] kar>chessmove e2e4
+[2025-03-07T03:36:49.126Z] The are just ruining our childhood now
+[2025-03-07T03:37:19.820Z] kar>chessmove e2e4
+[2025-03-07T03:37:25.097Z] Whoever the fuck watches that is a shithead
+[2025-03-07T03:38:32.067Z] kar>chessmove e2e4
+[2025-03-07T03:40:15.407Z] kar> chessmove e2e4
+[2025-03-07T03:41:19.784Z] kar> chessmove e2e4
+[2025-03-07T03:41:41.837Z] It used to be so good
+I watched powerpuff girls a bit too much back in the day its a part of my childhood 
+Though I forgot the most part I still remember some stuff
+[2025-03-07T03:42:18.291Z] My mom used to tease mefor watching a girly cartoon like Powerpuff girls
+[2025-03-07T03:42:22.875Z] Lmao
+[2025-03-07T03:44:58.044Z] kar>chessmove e2e4
+[2025-03-07T03:45:08.985Z] LET'S GO
+[2025-03-07T03:45:16.313Z] LET'S FUCKING GO DESHOU
+[2025-03-07T03:45:55.107Z] kar>chessmove Ng8Nf6
+[2025-03-07T03:46:22.125Z] right
+[2025-03-07T03:47:33.880Z] kar>chessmove Nc3
+[2025-03-07T03:47:43.259Z] But at least today i wanna do some project 
+Maybe smth related to cloud or for resume in general 
+Ig to show dev skills in the resume
+[2025-03-07T03:48:10.626Z] kar>chessmove e2e4
+[2025-03-07T03:48:44.725Z] Where is this showing lol
+[2025-03-07T03:48:54.767Z] kar>chessmove Nb1Nc3
+[2025-03-07T03:49:07.801Z] mental image
+[2025-03-07T03:49:49.447Z] LMAO
+[2025-03-07T03:49:55.157Z] I see
+[2025-03-07T03:49:59.215Z] Cool beans
+[2025-03-07T03:53:12.999Z] Im just having trouble on finding the right idea
+[2025-03-07T03:53:46.161Z] start with a baseplate that you can slowly build upon
+[2025-03-07T03:54:57.482Z] For example
+[2025-03-07T03:54:59.353Z] just something that helps you
+[2025-03-07T03:55:14.308Z] Hmmmm
+[2025-03-07T03:55:30.006Z] you don't have to immediately go "hmm what can I do for the tech world"
+[2025-03-07T03:55:34.972Z] nah bro be selfish fr
+[2025-03-07T03:55:39.669Z] Lmao
+[2025-03-07T03:55:44.156Z] U read me
+[2025-03-07T03:56:32.284Z] I was thinking like that cuz that notes website we built has got off to a fairly good start imo
+We genetated profit from it even
+[2025-03-07T03:56:49.774Z] Monii
+[2025-03-07T03:57:31.114Z] right, but not every project has to be like that yk
+[2025-03-07T03:57:48.374Z] first and foremost it gotta be something that makes you excited to work on it
+[2025-03-07T03:58:00.007Z] maybe not financially motivated but
+[2025-03-07T03:58:23.048Z] Yeahyeah
+[2025-03-07T03:59:41.914Z] Yeah fair point
+Hmm
+Im gonna chatgpt some ideas on a cloud project 
+Else ill do one for resume or other coding projects
+[2025-03-07T04:00:53.614Z] ~~meanwhile me working on this godforsaken abomination of scripting code we call javascript even though this shit has caused me more pain that happiness in recent history~~
+[2025-03-07T04:03:35.016Z] kar>chessmove e2e4
+[2025-03-07T04:04:15.160Z] kar>chessmove Nb1Nc3
+[2025-03-07T04:04:34.810Z] 
+[2025-03-07T04:04:39.513Z] when haven't I been
+[2025-03-07T04:07:00.418Z] Fr tho 😭  the stuff u make from it is nothing short of extraordinary
+[2025-03-07T04:26:19.184Z] it's been done before bro what 😭
+[2025-03-07T15:26:56.383Z] kar> give suggestions for innovative programming projects 🔥
+[2025-03-07T15:27:08.206Z] wow amazing
+[2025-03-07T15:27:42.409Z] kar> suggest some more, we need every idea we can get
+[2025-03-07T15:27:47.222Z] how abt this <@569554121523462185>
+[2025-03-07T15:28:10.774Z] it could work
+[2025-03-07T15:28:40.267Z] it'd be like Github but live ig?
+[2025-03-07T15:28:44.337Z] something like Flutterflow
+[2025-03-07T15:28:58.394Z] <:anguish:759475847823360021>
+[2025-03-07T15:29:10.198Z] 
+[2025-03-07T15:30:36.171Z] 
+[2025-03-07T15:30:36.172Z] 
+[2025-03-07T15:30:36.172Z] 
+[2025-03-07T15:30:36.172Z] Internet crashed
+[2025-03-07T15:30:36.172Z] <@569554121523462185>
+[2025-03-07T15:30:37.405Z] believe it or not
+[2025-03-07T15:30:37.976Z] React.js is new to me
+[2025-03-07T15:30:38.630Z] although Node.js and Express is way easier
+[2025-03-07T15:31:14.887Z] I think so
+[2025-03-07T15:31:25.037Z] React.js is pretty popular so documentations should be fine
+[2025-03-07T15:31:47.870Z] the Cloud API Key manager is probably the easiest here yet
+[2025-03-07T15:32:38.441Z] >"some experience"
+[2025-03-07T15:33:06.007Z] # IM SORRY
+[2025-03-07T15:33:10.512Z] I know how neuro-sama can be done
+[2025-03-07T15:33:11.977Z] # SORRRRRYYYY
+[2025-03-07T15:33:18.351Z] but it needs a lot of stuff and resources
+[2025-03-07T15:33:38.346Z] You'd need Huggingface, tons of python scripts
+[2025-03-07T15:33:43.055Z] a control panel and an API
+[2025-03-07T15:33:55.224Z] a TTS model, a model for the games
+[2025-03-07T15:34:09.512Z] so uk ai and frontend
+[2025-03-07T15:34:12.494Z] literally the goat
+[2025-03-07T15:34:22.948Z] backend I struggle fr
+[2025-03-07T15:34:36.159Z] you hate taking it from the back
+[2025-03-07T15:34:39.801Z] fr
+[2025-03-07T15:34:40.134Z] just like real life (I'm constipated(this is a jk))
+[2025-03-07T15:35:00.921Z] how abt we do this one
+[2025-03-07T15:35:11.903Z] <@569554121523462185>
+[2025-03-07T15:35:37.706Z] dw jota I took a bit of a shortcut with this
+[2025-03-07T15:35:44.137Z] sure
+[2025-03-07T15:35:55.380Z] I can just pull out the EncryptRyS code for this
+[2025-03-07T15:36:06.929Z] still 😭
+[2025-03-07T15:36:09.930Z] goated
+[2025-03-07T15:36:27.172Z] <:MavuikaCool_1:1315617859111747604>
+[2025-03-07T15:37:37.145Z] ```js
+function encrypt(value, method, passkey = "N/A") {
+    try {
+        switch (method.toLowerCase()) {
+            case 'sha256':
+                return crypto.createHash('sha256').update(value).digest('hex');
+            case 'md5':
+                return crypto.createHash('md5').update(value).digest('hex');
+            case 'aes':
+                if (!passkey || passkey === "N/A") throw new Error('AES encryption requires a passkey');
+
+                const key = crypto.scryptSync(passkey, 'salt', 32);
+                const iv = crypto.randomBytes(16);
+                const cipher = crypto.createCipheriv('aes-256-cbc', key, iv);
+
+                let encrypted = cipher.update(value, 'utf8', 'hex');
+                encrypted += cipher.final('hex');
+
+                return iv.toString('hex') + ':' + encrypted;
+            case 'base64':
+                return Buffer.from(value).toString('base64');
+            case 'rot13':
+                return value.replace(/[a-zA-Z]/g, (char) => {
+                    let offset = char <= 'Z' ? 65 : 97;
+                    return String.fromCharCode(((char.charCodeAt(0) - offset + 13) % 26) + offset);
+                });
+            case 'hex':
+                return Buffer.from(value).toString('hex');
+            default:
+                return 'Unsupported encryption method';
+        }
+    } catch (error) {
+        return `Error: ${error.message}`;
+    }
+}
+```
+
+we can run it through something like this
+[2025-03-07T15:38:03.656Z] btw this is native for javascript so we don't even have to use anything
+[2025-03-07T15:38:39.977Z] just an
+```js
+const crypto = require('crypto');
+``` is enough to use it
+[2025-03-07T15:39:21.746Z] *stop whispering, I didn't order an ASMR*
+[2025-03-07T15:39:37.197Z] # HELL FUCKING NO
+[2025-03-07T15:39:54.309Z] https://tenor.com/view/finnish-hospital-kys-gif-27573537
+[2025-03-07T15:40:16.172Z] get away :sk
+[2025-03-07T15:40:34.921Z] details
+[2025-03-07T15:41:58.109Z] oh that's good, generate the API key with Azure, send it to the js script to encrypt it, let the user choose what kind of encryption to use
+[2025-03-07T15:42:32.844Z] Hm
+[2025-03-07T15:42:36.884Z] that's good
+[2025-03-07T15:42:45.907Z] any free resource is good resource
+[2025-03-07T15:43:39.285Z] wait why is the kafka bot on mobile
+
+nanda*fuck* kore <:pepe_what:1070500820631683123>
+[2025-03-07T15:44:20.239Z] rys>help
+[2025-03-07T15:44:58.437Z] rys>genPass 22
+[2025-03-07T15:45:22.794Z] rys>encrypt $6u*M-wZ-OF4dRsozI%pDE hex
+[2025-03-07T15:45:29.128Z] <:MavuikaBurn:1315612226719322152>
+[2025-03-07T15:45:57.918Z] *bro shot and got shot back*™️
+[2025-03-07T15:46:09.842Z] :1
+[2025-03-07T15:46:18.688Z] :2
+[2025-03-07T15:46:58.058Z] n word can be unbanned but not the r word
+[2025-03-07T15:47:51.753Z] I would sacrifice nigger and faggot to keep the r word banned <:KurisuSip:586126549645000714>
+[2025-03-07T15:48:02.717Z] <:warfinLaugh:1239595464081276938>
+[2025-03-07T15:48:20.673Z] # I'll say it again<:AA_Fubuki_Cool:716178523966013511>
+[2025-03-07T15:48:34.777Z] Damn, that's crazy.
+
+
+Rapes you.
+[2025-03-07T15:48:43.468Z] <:warfinLaugh:1239595464081276938>
+[2025-03-07T15:48:56.623Z] https://tenor.com/view/tank-mbt-syria-shut-up-firing-gif-2622405693088866287
+[2025-03-07T15:49:23.362Z] do it
+[2025-03-07T15:49:36.051Z] I would eat mine but it's a goddamn webcam
+[2025-03-07T15:50:01.417Z] 
+[2025-03-07T15:50:12.459Z] LMAO MB
+[2025-03-07T15:50:22.489Z] I WAS FLIPPING OFF THE PIECE OF SHIT MIC
+[2025-03-07T15:51:38.703Z] bro made me press the button that involuntarily makes you speak and get water
+[2025-03-07T15:51:45.562Z] (it's Pause Break)
+[2025-03-07T15:52:10.492Z] nah bro stop glazing my voice I'll cu-
+[2025-03-07T15:52:15.467Z] 
+[2025-03-07T15:52:41.565Z] 
+[2025-03-07T15:53:15.767Z] bro it's obviously Le Phallic object
+[2025-03-07T15:53:33.317Z] sweet summer child
+[2025-03-07T15:53:33.430Z] help with what
+[2025-03-07T15:53:35.105Z] 😔
+[2025-03-07T15:54:09.312Z] one sec lemme find some earphones to use as mic
+[2025-03-07T15:54:11.799Z] it's called toy.Phallus()=>{}
+[2025-03-07T15:54:19.201Z] ***come on you have got to get that***
+[2025-03-07T15:54:21.536Z] should i get decent ones or steven hawking mic
+[2025-03-07T15:54:27.801Z] COME ON WHAT DOES THE FUNCTION LOOK LIKE
+[2025-03-07T15:54:39.802Z] WHAT DOES THE BRACKETS LOOK LIKE
+[2025-03-07T15:54:42.614Z] CORRECT
+[2025-03-07T15:54:42.804Z] HE GOT IT
+[2025-03-07T15:54:46.317Z] NOW WHAT TOY IS CALLED THAT
+[2025-03-07T15:54:58.155Z] https://tenor.com/view/suomi-girls-frontline-2-gfl-girls-frontline-bonk-gif-14526394384392186196
+[2025-03-07T15:55:19.361Z] I can't believe I haven't corrupted you enough
+[2025-03-07T15:56:05.324Z] <@569554121523462185> <@783979727462596619>
+[2025-03-07T15:56:23.608Z] give me a second to find it
+[2025-03-07T15:56:26.201Z] >"You can't corrupt me"
+>
+[2025-03-07T15:56:43.231Z] proof or it didn't happen
+[2025-03-07T15:56:58.902Z] giving it to Abk
+[2025-03-07T15:57:00.931Z] jk
+[2025-03-07T15:57:04.792Z] 
+[2025-03-07T15:57:22.315Z] scared you now huh 💀
+[2025-03-07T15:57:42.322Z] aight
+[2025-03-07T15:57:46.367Z] i got them plugged in
+[2025-03-07T15:57:57.206Z] 
+[2025-03-07T15:57:57.361Z] <@727946854305628290> ready to hear steven hawking?
+[2025-03-07T15:58:15.202Z] we can start tomorrow, we can plan today I think
+[2025-03-07T15:58:22.654Z] suree yatttaaa
+[2025-03-07T15:58:28.718Z] let me dig deeper on how to start
+[2025-03-07T15:58:38.841Z] Steep hink cock in????!
+[2025-03-07T15:59:22.768Z] kar>randomly speak Polish
+[2025-03-07T15:59:24.866Z] peak mics fr
+[2025-03-07T15:59:44.743Z] PIERDOLE KURWA <a:WHAT:1293890244290019420>
+[2025-03-07T15:59:46.186Z] 
+[2025-03-07T15:59:53.329Z] 
+[2025-03-07T16:00:03.052Z] 
+[2025-03-07T16:00:05.133Z] heres the plans <@569554121523462185>
+[2025-03-07T16:00:14.225Z] 
+[2025-03-07T16:00:20.024Z] oh wait actually hold on
+[2025-03-07T16:00:31.423Z] https://discord.com/channels/1236723034912456765/1236723037303214241/1347599628295737496
+[2025-03-07T16:00:33.659Z] 
+[2025-03-07T16:00:52.926Z] 
+[2025-03-07T16:00:53.055Z] programming
+[2025-03-07T16:00:55.164Z] blyat
+[2025-03-07T16:01:07.822Z] add it here <@783979727462596619>
+[2025-03-07T16:01:10.310Z] the other photos
+[2025-03-07T16:01:13.056Z] alr
+[2025-03-07T16:01:27.592Z] 
+[2025-03-07T16:01:43.228Z] Me when I accidentally create runtime malware:
+[2025-03-07T16:01:43.474Z] Project programming
+[2025-03-07T16:01:47.282Z] https://tenor.com/view/ied-better-call-saul-bomb-your-honor-gif-24668812
+[2025-03-07T16:02:36.970Z] sounds great, weekends are fine
+[2025-03-07T16:02:47.226Z] fr
+[2025-03-07T16:03:04.679Z] anyone can chip in if they have experience so yk, why not, if they have ideas
+[2025-03-07T16:04:03.694Z] <@727946854305628290> <@758049435447197788>
+[2025-03-07T16:04:20.905Z] I absolutely love the logging for discord.js it's so sexy
+[2025-03-07T16:04:32.810Z] 
+[2025-03-07T16:05:09.210Z] exactly 🙏
+[2025-03-07T16:05:13.769Z] and the fun part
+[2025-03-07T16:05:19.627Z] you can grab shit from here
+[2025-03-07T16:05:20.353Z] https://tenor.com/view/yoshi-mario-mario-party-superstars-dance-gif-23646599
+[2025-03-07T16:05:30.658Z] https://tenor.com/view/spongebob-ascending-gif-12224952850809471339
+[2025-03-07T16:06:02.729Z] me when I realize the shortform name of the FemMC in Metamorphosis is also Yoshi:
+[2025-03-07T16:06:10.438Z] https://tenor.com/view/lain-serial-experiments-lain-powerful-insane-blow-up-gif-24917102
+[2025-03-07T16:06:32.546Z] oh god
+[2025-03-07T16:07:07.552Z] technically it's Saki Yoshida but like bro
+[2025-03-07T16:07:20.975Z] just having "Yoshi" there is like that one large ass brand logo from LC Signs
+[2025-03-07T16:08:14.631Z] Password reset 2.0
+[2025-03-07T16:08:19.836Z] <:warfinLaugh:1239595464081276938>  tony lc sign the goat
+[2025-03-07T16:08:31.792Z] "Install RATs on your friend's systems as a sign of brotherhood"
+[2025-03-07T16:08:47.991Z] "Remote Access Tokens for the win"
+[2025-03-07T16:09:23.858Z] I remember when dumbass me fell for that and then the dumbass hacker didn't do anything to my pc
+[2025-03-07T16:09:33.990Z] bro had keylog access and shit and didn't even do anything
+[2025-03-07T16:10:03.004Z] I managed to find it and overwrote the data with "YOURMOM"
+[2025-03-07T16:10:18.453Z] then I deleted it off my system 💀
+[2025-03-07T16:10:57.244Z] Nah wtf
+[2025-03-07T16:10:59.278Z] oh yeah sure
+[2025-03-07T16:11:03.463Z] 6m tanks?
+[2025-03-07T16:11:33.593Z] damn
+[2025-03-07T16:14:13.335Z] https://www.youtube.com/watch?v=1zTVSSONL88 <@442857430305734657>
+[2025-03-07T16:14:46.556Z] Spirits of Steel 💀
+[2025-03-07T16:16:12.385Z] https://www.youtube.com/watch?v=wYvEATJum7s\\
+[2025-03-07T16:16:21.233Z] WHAT THE FUCK
+[2025-03-07T16:16:37.021Z] EVERYTHING IS BECOMING MILSIM
+[2025-03-07T16:16:54.556Z] fuc
+[2025-03-07T16:16:56.820Z] everyone hoem
+[2025-03-07T16:17:03.283Z] <@758049435447197788>  sorry
+[2025-03-07T16:25:35.931Z] for?
+[2025-03-07T16:25:36.933Z] that's insane
+[2025-03-07T16:26:56.963Z] Going abruptly off the stream
+[2025-03-07T16:27:27.900Z] <:skull_og:1338557571073839216>
+[2025-03-16T11:30:19.142Z] kar>久しぶりカレリアさん
+[2025-03-16T11:41:48.956Z] <@783979727462596619> search up brazillian "THE WORLD"
+[2025-03-16T11:44:11.380Z] kar>hello! you don't mind me calling you lia right
+[2025-03-16T11:46:18.497Z] kar>what's up lia? anything interesting lately?
+[2025-03-16T11:47:48.921Z] amongus
+[2025-03-16T11:47:51.026Z] ik lmao
+[2025-03-16T11:47:58.687Z] i saw dio 4 languages za warudo scream
+[2025-03-16T11:48:00.776Z] yesterday
+[2025-03-16T11:48:23.986Z] kar>error on the adding to personality part, test 1
+[2025-03-16T11:48:54.338Z] okay that should work, hopefully
+[2025-03-16T11:49:00.192Z] kar>say something random
+[2025-03-16T11:49:15.674Z] <@827768447643418635>  you seeing this?
+[2025-03-16T11:49:21.345Z] 💀
+[2025-03-16T11:49:22.335Z] YES, YES. YES. YES.
+[2025-03-16T12:50:05.457Z] 
+[2025-03-16T12:51:09.067Z] She just like me
+[2025-03-17T19:36:55.693Z] <@1068860427548770384> test
+[2025-03-17T19:41:48.694Z] NO WAY CHAT
+[2025-03-17T19:41:49.176Z] 
+[2025-03-17T19:44:04.748Z] Quick everyone grab his ip
+[2025-03-17T19:44:54.754Z] whatever can you do to my IP, oh no <a:joever:1152008201487785984>
+[2025-03-17T19:45:08.808Z] it's a cloudflare issue it seems
+[2025-03-17T19:45:48.369Z] I think OpenAI is being attacked rn
+[2025-03-17T19:46:06.059Z] it did say "Error: too many requests" a refresh before that
+[2025-03-17T19:46:09.291Z] 
+[2025-03-17T19:47:03.827Z] yup
+[2025-03-17T19:47:09.605Z] definitely an attack
+[2025-03-17T20:14:38.039Z] <@1068860427548770384> help
+[2025-03-17T20:14:58.093Z] why are you seductive this iteration
+[2025-03-17T20:45:48.487Z] <@1068860427548770384>
+[2025-03-17T20:46:31.416Z] <@1068860427548770384>
+[2025-03-17T20:46:45.030Z] well that didn't work
+[2025-03-17T20:47:34.266Z] <@1068860427548770384> analyze
+[2025-03-17T20:49:01.388Z] it actually kinda works alright
+[2025-03-17T20:49:36.389Z] <@1068860427548770384> analyze
+[2025-03-17T20:51:42.900Z] <@1068860427548770384> analyze
+[2025-03-17T20:55:52.092Z] <@1068860427548770384> analyze
+[2025-03-17T20:56:07.939Z] <@758049435447197788>
+[2025-03-17T20:56:12.652Z] LET'S FUCKING GO
+[2025-03-17T20:56:36.507Z] You did it?
+[2025-03-17T21:07:06.796Z] kind of
+[2025-03-17T21:11:16.396Z] <@1068860427548770384>
+[2025-03-17T21:14:00.702Z] <@1068860427548770384>
+[2025-03-17T21:24:36.664Z] <@1068860427548770384>
