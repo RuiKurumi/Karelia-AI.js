@@ -38,6 +38,16 @@ module.exports = (client) => {
   client.on("messageCreate", async function (message) {
     if (message.author.bot) return;
 
+    //crowd control
+    try {
+      const blacklistData = JSON.parse(fs.readFileSync(blacklistPath));
+      if (blacklistData.blacklisted_user_ids.includes(message.author.id)) {
+        return; // Stop everything if they're blacklisted
+      }
+    } catch (err) {
+      console.error("Failed to read blacklist:", err);
+    }
+
     content = message.content.trim(); // Update the global content variable
     zrffntrUnaqyre(message);
 
@@ -56,6 +66,7 @@ module.exports = (client) => {
       message.channel.send(`${message.author}, your message contained prohibited words or phrases and was removed.`).then(msg => {
         setTimeout(() => msg.delete(), 5000);
       });
+      await WarningCount(message.author.id, message);
       zrffntrUnaqyre(message);
       sendToFiltered(message);
       return;
@@ -206,4 +217,34 @@ function addToPersonality(content, response) {
       console.error("Error parsing JSON:", parseError);
     }
   });
+}
+const blacklistPath = path.join(__dirname,"../logs-storage", "blacklist.json");
+
+async function WarningCount(userId, message) {
+  let blacklistData = {
+    warnings: {},
+    blacklisted_user_ids: []
+  };
+
+  if (fs.existsSync(blacklistPath)) {
+    const data = fs.readFileSync(blacklistPath);
+    blacklistData = JSON.parse(data);
+  }
+
+  if (!blacklistData.warnings[userId]) {
+    blacklistData.warnings[userId] = 1;
+  } else {
+    blacklistData.warnings[userId]++;
+  }
+
+  const warningCount = blacklistData.warnings[userId];
+
+  if (warningCount >= 3 && !blacklistData.blacklisted_user_ids.includes(userId)) {
+    blacklistData.blacklisted_user_ids.push(userId);
+    await message.channel.send(`${message.author}, you have been blacklisted due to repeated violations. Please Appeal Via EncryptRyS.`);
+  } else {
+    await message.channel.send(`Hello ${message.author}! You have received warning #${warningCount} for using a banned word/phrase.`);
+  }
+
+  fs.writeFileSync(blacklistPath, JSON.stringify(blacklistData, null, 2));
 }
