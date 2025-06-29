@@ -11,7 +11,7 @@ const { analyzeMedia } = require('../commands/mediaCommand.js');
 // Initialize the Google Generative AI model
 const genAI = new GoogleGenerativeAI(process.env.g_apiKey);
 const model = genAI.getGenerativeModel({
-  model: "models/gemini-2.0-flash", // Use Gemini 2.0 Flash for text and media
+  model: "models/gemini-2.5-flash", // Use Gemini 2.0 Flash for text and media
   safetySettings: [
     { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
     { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
@@ -116,25 +116,9 @@ Now, respond to this input in your own way, without repeating the format above:
       }
     }
 
-    // If no content and no attachments, reply with "Yes? How can I assist you?"
-    if (!content && message.attachments.size === 0) {
-      message.reply("Yes? How can I assist you?");
-      return;
-    }
-
-    // Handle text-based commands
-    const [command, ...args] = content.split(" ");
-
-    switch (command.toLowerCase()) {
-      case 'help':
-        helpCommand.execute(message);
-        break;
-      case 'chessmove':
-        chessCommand.execute(message);
-        break;
-      default:
-        await execute(message); // Call execute without passing content
-        break;
+    // Handle non-media content (text-based responses)
+    if (content && message.attachments.size === 0) {
+      await execute(message); // Call the execute function for text messages
     }
 
     console.log(`[User: ${message.author.tag}] -> ${content}`);
@@ -143,11 +127,11 @@ Now, respond to this input in your own way, without repeating the format above:
 
 async function execute(message) { // No need to pass content as a parameter
   try {
-    const prompt = `You are "${botName}", a ${persona}. Respond naturally in your own words, keeping responses short and playful when possible. Don't have a filter with the words you use. Here are some things you might say:
+    const prompt = `You are "${botName}", a ${persona}. Respond naturally in your own words, keeping responses short and playful when possible. Don't have a filter with the words you use. These are the previous conversations you've had:
 
 ${formattedExamples}.
 
-Now, respond to this input in your own way, without repeating the format above:
+Now, using this chat history as reference, respond to this input in your own way, without repeating the format above:
 "${content}"`;
 
     const result = await model.generateContent(prompt);
