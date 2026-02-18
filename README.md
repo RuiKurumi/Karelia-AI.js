@@ -1,10 +1,11 @@
 # Karelia-AI.JS
 
-Beelzebul-AI.JS is an LLM-based Artificial Intelligence Discord Bot modeled as close as possible to an actual human for *ScIeNtIfIc pUrPoSes*. Uses Google Generative AI.
 
-
-### Preface:
+# Preface:
 - This branch is for Fluxer bots. Message Handling is done here with mostly discord.js/core. 
+
+## Information: 
+Beelzebul-AI.JS is an LLM-based Artificial Intelligence Discord Bot modeled as close as possible to an actual human for *ScIeNtIfIc pUrPoSes*. Uses Google Generative AI.
 
 ### Requirements
 - latest version of node.js
