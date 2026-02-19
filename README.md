@@ -9,12 +9,12 @@ Beelzebul-AI.JS is an LLM-based Artificial Intelligence Discord Bot modeled as c
 
 ### Requirements
 - latest version of node.js
-- latest version of discord.js
+- latest version of @discord.js/core
 - Visual Studio Code (Optional)
 ### Installation
 1. Installing Dependecies
 
-   -`npm i` or `npm i discord.js fs @google/generative-ai`
+   -`npm i` or `npm i @discord.js/core fs @google/generative-ai`
 3. Setting up Variables
  - Make your own `.env` file with the variables:
   - bot_token
@@ -31,6 +31,35 @@ bot_ID = bot_ID
 ```
 
 This is incredibly helpful for making your projects secure, especially when using hosting, or ***uploading your random shenanigans on github*** *(Yes, I'm staring at myself.)*
+
+4. Setting up your Fluxer index file
+There is a massive difference between discord.js and discord.js/core when it comes to message handling.
+
+A normal discord bot would initiate the client like this:
+```js
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.MessageContent,
+  ],
+});
+```
+
+While a Fluxer bot would initiate it like this:
+```js
+const rest = new REST({ api: "https://api.fluxer.app", version: "1" }).setToken(token);
+const gateway = new WebSocketManager({
+    token,
+    intents: 0, // Fluxer ignores intents
+    rest,
+    version: "1",
+});
+
+const client = new Client({ rest, gateway });
+```
+Since Fluxer is still fairly new, Gateway intents are not yet a thing.
 
 4. Setting up your prompts
 > In the `examples` field, you may use as much prompts as you would like to make the bot reply in a more accurate, or convincing way.
