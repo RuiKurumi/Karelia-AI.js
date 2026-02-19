@@ -61,7 +61,7 @@ client.on(GatewayDispatchEvents.InteractionCreate, async ({ api, data: interacti
 });
 
 // --- YOUTUBE LOGIC ---
-const API_KEY = 'AIzaSyAt85aHSOvKePShSH_MIiSoyeTKFcXOq8w';
+const API_KEY = '';
 const vtubers = [
     { name: "Yubari Rei", channelId: "UCnn1Pb_JtyHbiDTELf7mgSA" },
     { name: "Mori Calliope", channelId: "UCL_qhgtOy0dy1Agp8vkySQg" },
