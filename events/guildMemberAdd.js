@@ -1,23 +1,32 @@
-// events/guildMemberAdd.js
 const { EmbedBuilder } = require('@discordjs/builders');
+const welcomeGifs = require('../gifarray.json');
 
 module.exports = (client) => {
-  const welcomeChannelId = process.env.welcomeChannelId; // Get the welcome channel ID from .env
-
   client.on('guildMemberAdd', async (member) => {
-    const welcomeChannel = member.guild.channels.cache.get(welcomeChannelId);
+    try {
+      // Fetch the welcome channel dynamically
+      const welcomeChannel = member.guild.channels.cache.find(
+        (channel) => channel.name.toLowerCase().includes('welcome') && channel.isTextBased()
+      );
 
-    if (welcomeChannel) {
+      if (!welcomeChannel) {
+        console.error(`Welcome channel not found in guild: ${member.guild.name} (${member.guild.id})`);
+        return;
+      }
+      const randomGif = welcomeGifs[Math.floor(Math.random() * welcomeGifs.length)];
+
       const embed = new EmbedBuilder()
-        .setTitle(`Welcome to The Dugout, ${member.user.tag}!`)
-        .setDescription('On behalf of the staff and the members, we hope you have a nice stay!')
-        .setFooter({ text: 'The Dugout', iconURL: member.guild.iconURL() }) // Use server name and icon
+        .setTitle(`Welcome to ${member.guild.name}, ${member.user.tag}!`)
+        .setDescription('On behalf of the staff and members, we hope you have a great stay!')
+        .setFooter({ text: member.guild.name, iconURL: member.guild.iconURL() }) // Use server name and icon
+        .setImage(randomGif)
         .setColor(0x00FF00) // Set a color for the embed
         .setThumbnail(member.user.displayAvatarURL()); // Add the user's avatar as a thumbnail
 
-      welcomeChannel.send({ embeds: [embed] });
-    } else {
-      console.error('Welcome channel not found!');
+      await welcomeChannel.send({ embeds: [embed] });
+      console.log(`Welcome message sent to ${member.user.tag} in ${member.guild.name}.`);
+    } catch (error) {
+      console.error(`Error sending welcome message in guild ${member.guild.id}:`, error);
     }
   });
 };
