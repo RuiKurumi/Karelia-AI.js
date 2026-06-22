@@ -60,13 +60,7 @@ Discord Output
 
 > [!NOTE]
 > ### an .env file must look like this;
-> ```
-> bot_token=
-> prefix=
-> bot_id=
-> g_ApiKey=
-> SERPER_API_KEY=
-> ```
+> https://github.com/RuiKurumi/Karelia-AI.js/blob/d15e85800ea05c9b9841081d860f91ab01a6df56/.env.example#L1-L6
 
 > [!TIP]
 > ### This is incredibly helpful for making your projects secure, especially when using hosting, or ***uploading your random shenanigans on github*** *(Yes, I'm staring at myself.)*
