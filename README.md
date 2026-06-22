@@ -59,12 +59,8 @@ Discord Output
 
 
 ### Note: an .env file must look like this;
-```
-prefix = prefix
-g_ApiKey =  g_ApiKey
-bot_token = bot_token
-bot_ID = bot_ID
-```
+https://github.com/RuiKurumi/Karelia-AI.js/blob/9f91eb889f995f1d19f96df4de0c94b2459e725e/.env.example?plain=1
+
 > [!TIP]
 > This is incredibly helpful for making your projects secure, especially when using hosting, or ***uploading your random shenanigans on github*** *(Yes, I'm staring at myself.)*
 
