@@ -94,10 +94,10 @@ Running with an IDE is preferred. However, if you want to run from the Command L
 
 > [!CAUTION]
 > # WARNING: 
-> DO NOT CREEP OUT YOUR FRIENDS WITH ~~THEIR REFLECTION~~ THIS 
+> # DO **NOT** CREEP OUT YOUR FRIENDS WITH ~~THEIR REFLECTION~~ THIS 
 
 > [!NOTE]
 > - Yes, the missile quote is intentional
 > - No, it will not be removed
-> - Yes, the bot can become weird if you try hard enough (X to doubt)
+> - Yes, the bot can become weird if you try hard enough (X to doubt, really)
 > - No, I don’t recommend testing that last one
