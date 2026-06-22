@@ -1,16 +1,16 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs');
-const path = require('path');
-
-// Use native fetch if available (Node.js 18+), otherwise use node-fetch
-const fetch = globalThis.fetch || require('node-fetch');
 
 // Initialize Gemini
-const genAI = new GoogleGenerativeAI(process.env.g_apiKey);
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); // Use Gemini 2.0 Flash for multimodal inputs
+const googleApiKey = process.env.GOOGLE_API_KEY || process.env.g_apiKey;
+const genAI = googleApiKey ? new GoogleGenerativeAI(googleApiKey) : null;
 
 // Function to analyze media
-async function analyzeMedia(message, filePath) {
+async function analyzeMedia(message, filePath, mimeType = "image/jpeg") {
+  if (!genAI) {
+    throw new Error("GOOGLE_API_KEY is not configured.");
+  }
+
   try {
     // Read the file as a base64 string
     const fileData = fs.readFileSync(filePath);
@@ -20,7 +20,8 @@ async function analyzeMedia(message, filePath) {
     const prompt = "Describe this image or GIF in a fun and engaging way.";
 
     // Send the media to Gemini 2.0 Flash
-    const result = await model.generateContent([prompt, { inlineData: { data: base64Data, mimeType: "image/jpeg" } }]);
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const result = await model.generateContent([prompt, { inlineData: { data: base64Data, mimeType } }]);
     const response = result.response.text();
 
     // Return the analysis result
@@ -30,7 +31,13 @@ async function analyzeMedia(message, filePath) {
     throw new Error("Sorry, I couldn't analyze that media. Please try again.");
   } finally {
     // Clean up: Delete the temporary file
-    fs.unlinkSync(filePath);
+    try {
+      fs.unlinkSync(filePath);
+    } catch (error) {
+      if (error.code !== "ENOENT") {
+        console.error("Error deleting temporary media file:", error);
+      }
+    }
   }
 }
 
