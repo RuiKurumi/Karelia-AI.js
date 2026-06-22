@@ -58,20 +58,21 @@ Discord Output
 > <img width="355" height="375" alt="image" src="https://github.com/user-attachments/assets/8e53a2db-2692-48ee-8a41-f59ffd50cd1b" />
 
 
-### Note: an .env file must look like this;
-```
-bot_token=
-prefix=
-bot_id=
-g_ApiKey=
-SERPER_API_KEY=
-```
+> [!NOTE]
+> ### an .env file must look like this;
+> ```
+> bot_token=
+> prefix=
+> bot_id=
+> g_ApiKey=
+> SERPER_API_KEY=
+> ```
 
 > [!TIP]
-> This is incredibly helpful for making your projects secure, especially when using hosting, or ***uploading your random shenanigans on github*** *(Yes, I'm staring at myself.)*
+> ### This is incredibly helpful for making your projects secure, especially when using hosting, or ***uploading your random shenanigans on github*** *(Yes, I'm staring at myself.)*
 
 4. Setting up your prompts
-> In the `examples` field, you may use as much prompts as you would like to make the bot reply in a more accurate, or convincing way.
+> ### In the `examples` field, you may use as much prompts as you would like to make the bot reply in a more accurate, or convincing way.
 ```json
  "examples": [
   {
