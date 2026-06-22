@@ -95,6 +95,7 @@ Discord Output
 > [!TIP]
 > You have been provided with an env example. 
 > *It's not like I wanted you to have an easier time or anything*.
+> <img width="355" height="375" alt="image" src="https://github.com/user-attachments/assets/8e53a2db-2692-48ee-8a41-f59ffd50cd1b" />
 
 > [!NOTE]
 > ### an .env file must look like this;
