@@ -1,7 +1,7 @@
 # 🧠 Karelia-AI.JS
 
 
-<p align="center"> <img src="https://img.shields.io/badge/Node.js-18%2B-3C873A?logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/Discord.js-v14-5865F2?logo=discord&logoColor=white"/> <img src="https://img.shields.io/badge/LLM-Google%20Generative%20AI-8A2BE2"/> <img src="https://img.shields.io/badge/Status-Suspiciously%20Human-red"/> <img src="https://img.shields.io/badge/License-MIT-lightgrey"/> </p> <p align="center"> <b>Karelia-AI.JS</b> is an LLM-based Discord bot modeled as close as possible to an actual human for <i>ScIeNtIfIc pUrPoSes</i>. <br/> Powered by Google Generative AI. Absolutely nothing unusual going on here. </p>
+<p align="center"> <img src="https://img.shields.io/badge/Node.js-18%2B-3C873A?logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/Discord.js-v14-5865F2?logo=discord&logoColor=white"/> <img src="https://img.shields.io/badge/LLM-Groq-F55036?logo=groq&logoColor=white"/> <img src="https://img.shields.io/badge/Status-Suspiciously%20Human-red"/> <img src="https://img.shields.io/badge/License-MIT-lightgrey"/> </p> <p align="center"> <b>Karelia-AI.JS</b> is an LLM-based Discord bot modeled as close as possible to an actual human for <i>ScIeNtIfIc pUrPoSes</i>. <br/> Powered by Groq. Absolutely nothing unusual going on here. </p>
 
 ----
 # 🌌 Overview
@@ -13,14 +13,51 @@
 - **First and Foremost:** **Not** alive(!!!!)
 - **Not** self-aware
 - **Debatably convincing enough to be a problem**
+
+----
+# ✨ Features
+
+### 🤖 Personality Engine
+Karelia's responses are shaped by a `personality.json` file containing a system prompt and a list of few-shot `examples` — user/bot pairs that train the model to reply in a specific voice. The more examples you provide, the more consistent and convincing the persona becomes.
+
+### 💬 Contextual AI Chat
+Powered by Groq (`llama-3.3-70b-versatile`), Karelia reads recent message history to maintain conversational context. She responds when mentioned or replied to — not on every message, so she doesn't make it weird. Probably.
+
+### 🔍 Web Search Augmentation (SERPER)
+When configured with a `SERPER_API_KEY`, Karelia can perform real-time web searches to ground her responses in current information. The search layer is optional — the bot works fine without it.
+
+### 🖼️ Image Analysis
+Karelia can analyze images sent in chat using Google Generative AI's vision capabilities. Send her an image and she'll describe, comment on, or react to it in-character.
+
+### ♟️ Chess System
+Karelia supports full in-Discord chess matches powered by `chess.js` and Stockfish.
+
+- Challenge her with a slash command and play moves via standard notation
+- The board is rendered as an image using FEN strings, sent directly in chat after every move
+- Stockfish runs in a separate worker thread (`stockfishWorker.js`) so it doesn't block the main bot process
+- **Game-over states trigger special behavior** — Karelia taunts the loser and fires a reaction GIF to punctuate the moment
+
+### 🎞️ GIF Reaction System
+Karelia sends contextually appropriate GIFs in response to certain events (wins, losses, specific keywords, etc.) via Klipy. GIF data is stored and cached in `gifarray.json` and `learned_gifs_array.json`, allowing the reaction pool to grow over time.
+
+### 🔒 Encrypted Functions
+Sensitive or internal utility functions live in the `encryptedfunc/` directory, keeping them separate from the main bot logic.
+
+### 📋 Logging
+Bot activity is written to the `logs-storage/` directory for debugging and auditing purposes.
+
 ----
 # Requirements
-- latest version of node.js
-- latest version of discord.js
-- Visual Studio Code (Optional)
-- Maybe Docker Desktop (if you wanted to host it)
-----
+- Node.js 18+
+- A Discord bot token with Message Content Intent enabled
+- A Groq API key
+- A Klipy API key (for GIF reactions)
+- A Google API key (for image analysis)
+- A SERPER API key *(optional, for web search)*
+- Visual Studio Code *(optional)*
+- Docker Desktop *(optional, if you want to host it)*
 
+----
 # Architecture
 ```
 Discord Message
@@ -39,6 +76,7 @@ Response Formatter
     ↓
 Discord Output
 ```
+
 ----
 
 # Installation
@@ -46,17 +84,17 @@ Discord Output
 
 ## Setting up Variables
  - Make your own `.env` file with the variables:
-  - bot_token
-  - prefix
-  - bot_id
-  - g_ApiKey | GROQ_API_KEY
-  - SERPER_API_KEY -> `this is for search querying`
+  - `DISCORD_TOKEN`
+  - `DISCORD_CLIENT_ID`
+  - `BOT_PREFIX`
+  - `GROQ_API_KEY`
+  - `GOOGLE_API_KEY`
+  - `KLIPY_API_KEY`
+  - `SERPER_API_KEY` → *optional, for web search*
 
 > [!TIP]
 > You have been provided with an env example. 
 > *It's not like I wanted you to have an easier time or anything*.
-> <img width="355" height="375" alt="image" src="https://github.com/user-attachments/assets/8e53a2db-2692-48ee-8a41-f59ffd50cd1b" />
-
 
 > [!NOTE]
 > ### an .env file must look like this;
@@ -65,8 +103,30 @@ Discord Output
 > [!TIP]
 > ### This is incredibly helpful for making your projects secure, especially when using hosting, or ***uploading your random shenanigans on github*** *(Yes, I'm staring at myself.)*
 
-4. Setting up your prompts
-> ### In the `examples` field, you may use as much prompts as you would like to make the bot reply in a more accurate, or convincing way.
+## Installing Dependencies
+
+Navigate to the project directory and run:
+
+```bash
+npm install
+```
+
+This will pull in all required packages — `discord.js`, `groq-sdk`, `chess.js`, `@google/generative-ai`, `dotenv`, and others.
+
+## Deploying Slash Commands
+
+Before running the bot for the first time, register its slash commands with Discord:
+
+```bash
+node deploy-command.js
+```
+
+You only need to do this once, or whenever you add or modify commands.
+
+## Setting up your Personality
+Edit `personality.json` to define Karelia's character. The `system` field sets her core behavior; the `examples` field is where you train her voice with user/bot prompt pairs.
+
+> ### In the `examples` field, you may use as many prompts as you like to make the bot reply in a more accurate, or convincing way.
 ```json
  "examples": [
   {
@@ -86,8 +146,26 @@ or vice-versa, and by differentiating this from the algebraic sum of where it sh
   }
 ]
 ```
+
+
 ### Initialization 
-Running with an IDE is preferred. However, if you want to run from the Command Line, navigate to your target location with your copy of index.js with `cd <path>`, before running `node index.js`
+Running with an IDE is preferred. However, if you want to run from the Command Line, navigate to your target location with your copy of `index.js` using `cd <path>`, then run:
+
+```bash
+node index.js
+```
+
+Or use the provided npm script:
+
+```bash
+npm start
+```
+
+> [!TIP]
+> You can verify the bot's files for syntax errors before running with:
+> ```bash
+> npm test
+> ```
 
 > [!CAUTION]
 > # WARNING: 
@@ -97,4 +175,4 @@ Running with an IDE is preferred. However, if you want to run from the Command L
 > - Yes, the missile quote is intentional
 > - No, it will not be removed
 > - Yes, the bot can become weird if you try hard enough (X to doubt, really)
-> - No, I don’t recommend testing that last one
+> - No, I don't recommend testing that last one
