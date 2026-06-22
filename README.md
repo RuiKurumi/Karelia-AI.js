@@ -168,6 +168,43 @@ npm start
 > npm test
 > ```
 
+# [OPTIONAL] Docker Setup
+## Requirements:
+- [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Windows Subsystem for Linux](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Virtualization Enabled in BIOS](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-c5578302-6e43-4b4b-a449-8ced115f58e1)
+
+## Setting up:
+- Install WSL and Docker Desktop.
+- Open Docker Desktop to run Docker Engine.
+- create your "homebase" folder.
+- open Command Prompt, cd to your homebase folder and run `git clone https://github.com/RuiKurumi/Karelia-AI.js.git`
+- create your dockerfile:
+  - ```
+    FROM node:20-alpine
+
+    WORKDIR /app
+
+    COPY package*.json ./
+    RUN npm install
+
+    COPY . .
+
+    CMD ["node", "index.js"]
+    ```
+- Create .dockerignore
+  - ```
+    node_modules
+    temp
+    .env
+    *.log
+    ```
+- and then build (on Powershell) with:
+  - ```
+    docker build -t karelia .
+    docker run -d --name karelia --restart unless-stopped --env-file .env -v $(pwd)/data:/app/data -v $(pwd)/logs-storage:/app/logs-storage karelia
+    ```  
+- enjoy.
 > [!CAUTION]
 > # WARNING: 
 > # DO **NOT** CREEP OUT YOUR FRIENDS WITH ~~THEIR REFLECTION~~ THIS 
